@@ -1,0 +1,75 @@
+@mixin northern-form-checkbox {
+    .checkbox-label {
+        display: block;
+        padding-left: 25px;
+        color: get-color('grey-500');
+    }
+
+    [type='checkbox'] {
+        @include visually-hidden;
+
+        + .checkbox-proxy {
+            float: left;
+            color: get-color('grey-500');
+
+            &::before {
+                font-family: $icon-font;
+                content: $form-checkbox-content-unchecked;
+            }
+        }
+
+        &:checked {
+            + .checkbox-proxy::before {
+                font-family: $icon-font;
+                content: $form-checkbox-content-checked;
+            }
+        }
+    }
+
+    .form-field-checkbox {
+        label {
+            overflow: hidden;
+        }
+    }
+}
+
+@mixin northern-form-radio {
+    .radio-label {
+        display: block;
+        padding-left: 25px;
+        color: get-color('grey-500');
+    }
+
+    [type='radio'] {
+        @include visually-hidden;
+
+        + .radio-proxy {
+            float: left;
+            color: get-color('grey-500');
+
+            &::before {
+                font-family: $icon-font;
+                content: $form-radio-content-unchecked;
+            }
+        }
+
+        &:checked {
+            + .radio-proxy::before {
+                font-family: $icon-font;
+                content: $form-radio-content-checked;
+            }
+        }
+    }
+
+    .form-field-radio {
+        label {
+            overflow: hidden;
+        }
+    }
+}
+
+@mixin northern-form-file {
+    [type='file'] {
+        display: none;
+    }
+}

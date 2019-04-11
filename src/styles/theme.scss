@@ -35,6 +35,9 @@
 @import './components/icons';
 @import './components/placeholders';
 @import './components/responsive-images';
+@import './components/form/callout';
+@import './components/form/widget';
+@import './components/form/form';
 @import './components/footer';
 
 // Sections
@@ -46,6 +49,7 @@
 // Templates
 @import './templates/gift_card';
 @import './templates/product';
+@import './templates/password';
 
 // Layout
 @import './layout/grid';

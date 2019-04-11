@@ -1,0 +1,76 @@
+@mixin northern-form-result($color: get-color('black')) {
+    position: relative;
+    margin-top: rem-calc(20);
+    background: rgba($color, 0.1);
+    padding: rem-calc(12 40);
+    color: $color;
+    font-size: rem-calc(16);
+    font-weight: normal;
+    font-style: italic;
+
+    p {
+        color: inherit;
+    }
+}
+
+@mixin northern-form-result-icon($icon: 'alert') {
+    @include font-icon($icon) {
+        font-size: rem-calc(22);
+    }
+
+    position: absolute;
+    top: 50%;
+    left: rem-calc(10);
+    transform: translateY(-50%);
+}
+
+@mixin northern-form-callout-styles {
+    .northern-form-result-nojs {
+        @include northern-form-result(get-color-by-context('warning'));
+    }
+
+    .northern-form-result-success {
+        @include northern-form-result(get-color-by-context('success'));
+    }
+
+    .northern-form-result-error {
+        @include northern-form-result(get-color-by-context('error'));
+    }
+
+    .northern-form-result-nojs-icon {
+        @include northern-form-result-icon('info');
+    }
+
+    .northern-form-result-success-icon {
+        @include northern-form-result-icon('success');
+    }
+
+    .northern-form-result-error-icon {
+        @include northern-form-result-icon('alert');
+    }
+
+    .form-result-message-close {
+        @include transition(color);
+        position: absolute;
+        top: 50%;
+        right: rem-calc(10);
+        transform: translateY(-50%);
+        line-height: 0.5;
+        color: inherit;
+        font-size: rem-calc(32);
+
+        &:hover,
+        &:focus {
+            text-decoration: none;
+            color: get-color('black');
+        }
+    }
+
+    .form-result-message-close-icon {
+        text-decoration: none;
+
+        @include font-icon('close') {
+            font-size: rem-calc(20);
+        }
+    }
+}

@@ -1,11 +1,17 @@
+@mixin button($size: 'regular') {
+  @include button-size($size);
+  @include button-style('secondary');
+  @include transition(background);
+}
+
 .button {
-  display: inline-block;
-  vertical-align: middle;
-  width: auto;
-  border: 0;
-  text-align: center;
-  white-space: nowrap;
-  text-decoration: none;
-  user-select: none;
-  appearance: none;
+  @include button;
+}
+
+.button-small {
+  @include button('small');
+}
+
+.button-large {
+  @include button('large');
 }

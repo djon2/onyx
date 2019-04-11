@@ -1,0 +1,49 @@
+form {
+    @include kindling-form;
+    @include northern-form-checkbox;
+    @include northern-form-radio;
+    @include northern-form-file;
+    @include northern-form-callout-styles;
+
+    legend {
+        @include box-container;
+        @include box-section;
+    }
+
+    .form-field {
+        @include form-field;
+
+        &.error {
+            .field-error-message {
+                display: block;
+            }
+        }
+    }
+
+    .field-description {
+        @include form-help-text;
+    }
+
+    .field-error-message {
+        @include form-error-text;
+    }
+
+    .sneaky-label {
+        @include kindling-sneaky-labels;
+    }
+
+    textarea {
+        height: rem-calc(200);
+    }
+}
+
+.form-submit {
+    @include button;
+    margin-top: rem-calc(30);
+    width: 100%;
+    font-weight: $global-weight-bold;
+}
+
+.js-message.js-message {
+    margin-bottom: 0;
+}
