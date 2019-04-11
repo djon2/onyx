@@ -16,13 +16,13 @@
 
 
   {% if section.settings.title != blank %}
-    <h2 class="featured-collection__title">{{ section.settings.title | escape }}</h2>
+    <h2 class="featured-collection__title margin-b-xs">{{ section.settings.title | escape }}</h2>
   {% endif %}
 
   {%- assign collection = collections[section.settings.collection] -%}
 
   {% for product in collection.products limit: 6 %}
-    <a href="{{ product.url | within: collection }}" class="featured-collection-item">
+    <a href="{{ product.url | within: collection }}" class="featured-collection-item column-small-12 column-medium-6 column-large-4 margin-b-sm"> 
       {% if product.featured_image != blank %}
         <div class="featured-collection__image">
           {% include 'responsive-image' with
@@ -55,7 +55,7 @@
     </a>
   {% else %}
     {% for i in (1..6) %}
-      <a href="#" class="featured-collection-item">
+      <a href="#" class="featured-collection-item column-small-12 column-medium-6 column-large-4 margin-b-sm">
         {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
         {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg placeholder-svg--small' }}
 
