@@ -1,9 +1,15 @@
 @charset 'UTF-8';
 
 /**
- * [replace with theme name] | Built with Slate
+ * Onyx | Built with Slate
  */
 @import '~normalize.css/normalize';
+
+// // Dependencies
+@import 'node_modules/northern-kindling/scss/abstracts/functions';
+@import 'node_modules/northern-kindling/scss/abstracts/mixins';
+@import './core/kindling';
+
 
 // Settings
 @import './variables';
@@ -19,9 +25,11 @@
 @import './core/media';
 @import './core/responsive-tables';
 @import './core/rte';
+@import './core/fonts/icons';
 @import './core/typography';
 
 // Components
+@import './components/header';
 @import './components/buttons';
 @import './components/hero-banner';
 @import './components/icons';
@@ -37,3 +45,5 @@
 // Templates
 @import './templates/gift_card';
 @import './templates/product';
+
+// @include kindling-everything;

@@ -58,3 +58,169 @@ $breakpoints: (
   $large-up '(min-width: #{$grid-large})',
   $widescreen '(min-width: #{$grid-widescreen})'
 );
+
+
+//**
+//* Global
+//************************************
+$color-palette: (
+    'red': #d02035,
+    'yellow': #f6a623,
+    'green': #1b843d,
+    'blue': #003fa2,
+    'white': #f5f5f5,
+    'grey-100': #d8d8d8,
+    'grey-300': #adadad,
+    'grey-500': #767676,
+    'black': #111111
+);
+
+$color-contexts: (
+    'primary': 'red',
+    'secondary': 'grey-500',
+    'success': 'green',
+    'warning': 'yellow',
+    'error': 'red'
+);
+
+$global-weight-bold: get-font-weight('bold');
+$global-timing-function: 'ease-out';
+
+$z-index: (
+    assistive-background-image: -1,
+    banner: 0,
+    checker-row: 1,
+    main-sub-menu: 50,
+    back-to-top: 97,
+    header: 98,
+    offcanvas-overlay: 99,
+    mobile-offcanvas: 100,
+    skip-link: 999,
+);
+
+$universal-spacing: (
+    'xxs': (
+        'sm': rem-calc(15),
+        'md': rem-calc(15)
+    ),
+    'xs': (
+        'sm': rem-calc(30),
+        'md': rem-calc(30)
+    ),
+    'sm': (
+        'sm': rem-calc(30),
+        'md': rem-calc(50)
+    ),
+    'md': (
+        'sm': rem-calc(30),
+        'md': rem-calc(75)
+    ),
+    'lg': (
+        'sm': rem-calc(60),
+        'md': rem-calc(120)
+    ),
+    'xl': (
+        'sm': rem-calc(60),
+        'md': rem-calc(180)
+    )
+);
+
+$breakpoints: (
+    small: 0,
+    medium: 600px,
+    large: 900px,
+    xlarge: 1200px,
+    xxlarge: 1600px
+);
+
+//**
+//* Typography
+//************************************
+$anchor-text-decoration: none;
+
+//**
+//*  Forms
+//************************************
+$form-margin: (
+    'small': rem-calc(20)
+);
+//** Help Text
+$error-text-color: get-color-by-context('error');
+//** Input
+$form-legend-weight: $global-weight-bold;
+$input-border-color: get-color('grey-100');
+$input-border-radius: 0;
+$input-background-color: get-color('white');
+$input-background-disabled: get-color('grey-300');
+$select-triangle-color: get-color('black');
+$select-triangle-size: rem-calc(10);
+//** Select
+$triangle-shapes: (
+    'triangle': '<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="32" height="24" viewBox="0 0 32 24"><polygon points="0,0 32,0 16,24" style="fill: ___COLOR___"></polygon></svg>',
+    'chevron': '<?xml version="1.0" encoding="UTF-8"?><svg enable-background="new 0 0 407.437 407.437" version="1.1" viewBox="0 0 407.437 407.437" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><polygon points="386.26 91.567 203.72 273.51 21.179 91.567 0 112.82 203.72 315.87 407.44 112.82"/></svg>'
+);
+$select-triangle-shape: 'chevron';
+//** Sneaky Label
+$sneaky-label-color: get-color('grey-300');
+//** Widget
+$form-checkbox-content-unchecked: '\e907';
+$form-checkbox-content-checked: '\e906';
+$form-radio-content-unchecked: '\e929';
+$form-radio-content-checked: '\e92a';
+//**
+//*  Back to Top
+//************************************
+$back-to-top-button-small-length: rem-calc(30);
+$back-to-top-button-large-length: rem-calc(44);
+$back-to-top-button-screen-position: rem-calc(20);
+//**
+//*  Banner
+//************************************
+$banner-padding-ratio: 2;
+$hero-banner-height: (
+    'small': rem-calc(100),
+    'medium': rem-calc(200)
+);
+//**
+//*  Buttons
+//************************************
+$button-border-color: get-color('black');
+//**
+//*  Header
+//************************************
+$header-height: (
+    'small': rem-calc(80),
+);
+//**
+//*  Footer
+//************************************
+$footer-borders-color: get-color('grey-300');
+$copyright-link-color: get-color('white');
+//**
+//*  Socials
+//************************************
+$social-media-map: (
+    'facebook',
+    'twitter',
+    'googleplus',
+    'youtube',
+    'instagram',
+    'linkedin',
+    'pinterest',
+    'vimeo',
+);
+//**
+//*  WordPress Core
+//************************************
+$wordpress-alignright-margin: rem-calc(5 0 20 20);
+$wordpress-alignleft-margin: rem-calc(5 20 20 0);
+$wordpress-alignnone-margin: rem-calc(5 20 20 0);
+$wordpress-aligncenter-margin: rem-calc(5) auto rem-calc(20) auto;
+$wordpress-caption-background-color: get-color('grey-100');
+$wordpress-caption-text-small-padding: rem-calc(15 20);
+$wordpress-caption-text-large-padding: rem-calc(20 25);
+$wordpress-caption-text-font-size: rem-calc(14);
+$wordpress-caption-text-line-height: 1.4;
+$wordpress-caption-text-color: get-color('black');
+$wordpress-caption-text-style: italic;
+

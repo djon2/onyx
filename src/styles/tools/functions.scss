@@ -31,3 +31,21 @@
 
   @return $properties;
 }
+
+@function get-global-spacing($size, $viewport-size: 'md') {
+  @if map-has-key($universal-spacing, $size) {
+      $spacing: map-get($universal-spacing, $size);
+
+      @if map-has-key($spacing, $viewport-size) {
+          @return map-get($spacing, $viewport-size);
+      } @else {
+          @error 'Invalid viewport size "#{$viewport-size}" for spacing size "#{$size}"';
+      }
+  } @else {
+      @error 'Invalid spacing size "#{$size}"';
+  }
+}
+
+@function z-index($key) {
+  @return map-get($z-index, $key);
+}

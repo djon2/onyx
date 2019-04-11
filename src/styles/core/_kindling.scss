@@ -1,0 +1,46 @@
+///
+// NORTHERN Kindling
+// Version 1.0.0
+// northern.co
+///
+///
+// Dependencies
+///
+@import 'node_modules/northern-match/scss/match.scss';
+@import 'node_modules/mathsass/dist/math.scss';
+///
+// Utilities
+///
+@import 'node_modules/northern-kindling/scss/abstracts/functions.scss';
+@import 'node_modules/northern-kindling/scss/abstracts/mixins.scss';
+///
+// Global Styles
+///
+@import 'node_modules/northern-kindling/scss/base/global.scss';
+@import 'node_modules/northern-kindling/scss/base/typography.scss';
+@import 'node_modules/northern-kindling/scss/base/form.scss';
+///
+// Components
+///
+@import 'node_modules/northern-kindling/scss/components/accordion.scss';
+@import 'node_modules/northern-kindling/scss/components/aoda.scss';
+@import 'node_modules/northern-kindling/scss/components/badge.scss';
+@import 'node_modules/northern-kindling/scss/components/box.scss';
+@import 'node_modules/northern-kindling/scss/components/button.scss';
+@import 'node_modules/northern-kindling/scss/components/button-group.scss';
+@import 'node_modules/northern-kindling/scss/components/collapsible-menu.scss';
+@import 'node_modules/northern-kindling/scss/components/dropdown.scss';
+@import 'node_modules/northern-kindling/scss/components/embed.scss';
+@import 'node_modules/northern-kindling/scss/components/grid.scss';
+@import 'node_modules/northern-kindling/scss/components/modal.scss';
+@import 'node_modules/northern-kindling/scss/components/skip-link.scss';
+@import 'node_modules/northern-kindling/scss/components/switch.scss';
+@import 'node_modules/northern-kindling/scss/components/table.scss';
+@import 'node_modules/northern-kindling/scss/components/toolbar.scss';
+@import 'node_modules/northern-kindling/scss/components/tooltip.scss';
+
+@mixin kindling-everything() {
+    @include kindling-global-styles();
+    @include kindling-typography-styles();
+    @include screenreader-only-styles();
+}

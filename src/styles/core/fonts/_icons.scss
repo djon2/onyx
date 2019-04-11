@@ -1,0 +1,118 @@
+$icon-font: 'icon-font';
+$icon-font-path: '/src/assets/fonts/icons';
+$font-icon-glyph-map: (
+    'hours': '\e900',
+    'account': '\e901',
+    'alert': '\e902',
+    'bookmark': '\e903',
+    'calendar': '\e904',
+    'cart': '\e905',
+    'checkbox-on': '\e906',
+    'checkbox-off': '\e907',
+    'checkmark-strong': '\e908',
+    'chevron-down': '\e909',
+    'chevron-left': '\e90a',
+    'chevron-right': '\e90b',
+    'chevron-up': '\e90c',
+    'clock': '\e90d',
+    'close': '\e90e',
+    'edit': '\e90f',
+    'email': '\e910',
+    'info': '\e911',
+    'expand': '\e912',
+    'facebook': '\e913',
+    'gift': '\e914',
+    'googleplus': '\e915',
+    'heart-on': '\e916',
+    'heart-off': '\e917',
+    'question-mark': '\e918',
+    'instagram': '\e919',
+    'linkedin': '\e91a',
+    'locationpin': '\e91b',
+    'lock': '\e91c',
+    'loop': '\e91d',
+    'menu': '\e91e',
+    'minus': '\e91f',
+    'next': '\e920',
+    'pause': '\e921',
+    'phone': '\e922',
+    'pinterest': '\e923',
+    'play': '\e924',
+    'plus': '\e925',
+    'previous': '\e926',
+    'print': '\e927',
+    'quote': '\e928',
+    'radio-off': '\e929',
+    'radio-on': '\e92a',
+    'refresh': '\e92b',
+    'return': '\e92c',
+    'search': '\e92d',
+    'share': '\e92f',
+    'star-off': '\e930',
+    'star-on': '\e931',
+    'stop': '\e932',
+    'success': '\e933',
+    'tag': '\e934',
+    'trash': '\e935',
+    'triangle-left': '\e936',
+    'triangle-down': '\e937',
+    'triangle-right': '\e939',
+    'triangle-up': '\e93a',
+    'truck': '\e93b',
+    'tumblr': '\e93c',
+    'twitter': '\e93d',
+    'vimeo': '\e93e',
+    'warning': '\e93f',
+    'youtube': '\e940',
+    'zoom-in': '\e941',
+    'zoom-out': '\e942',
+    'in-stock': '\e943',
+    'out-of-stock': '\e944',
+    'wishlist-private': '\e945',
+    'wishlist-public': '\e946',
+);
+
+@font-face {
+    font-family: $icon-font;
+    font-weight: normal;
+    font-style: normal;
+    src: url('#{$icon-font-path}/Northern-UI---Default-Font.eot');
+    src: url('#{$icon-font-path}/Northern-UI---Default-Font.eot?#iefix') format('embedded-opentype'),
+    url('#{$icon-font-path}/Northern-UI---Default-Font.woff') format('woff'),
+    url('#{$icon-font-path}/Northern-UI---Default-Font.ttf') format('truetype'),
+    url('#{$icon-font-path}/Northern-UI---Default-Font.svg#Northern-UI---Default-Font') format('svg');
+}
+
+@mixin font-icon(
+    $icon-name,
+    $font-family: $icon-font
+) {
+    @if map-has-key($font-icon-glyph-map, $icon-name) {
+        &::before {
+            text-transform: none;
+            text-rendering: auto;
+            line-height: inherit;
+            font-family: $font-family;
+            font-weight: normal;
+            font-style: normal;
+            content: map-get($font-icon-glyph-map, $icon-name);
+            speak: none;
+            font-variant: normal;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            @content;
+        }
+    } @else {
+        @error 'Key: `#{$icon-name}` is not available in `#{$font-icon-glyph-map}`';
+    }
+}
+
+@mixin show-icons {
+    @each $name, $code in $font-icon-glyph-map {
+        .icon-#{$name} {
+            @include font-icon($name);
+        }
+    }
+}
+
+@include show-icons;

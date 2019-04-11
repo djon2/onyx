@@ -21,7 +21,7 @@
     @if $media-query == $name and $declaration {
       $breakpoint-found: true;
 
-      @media only screen and #{$declaration} {
+      @media only screen and (#{$declaration}) {
         @content;
       }
     }
@@ -106,4 +106,22 @@
   height: auto;
   margin: 0;
   clip: auto;
+}
+
+@mixin z-index($key) {
+  z-index: z-index($key);
+}
+
+@mixin overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+@mixin vertical-center {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
