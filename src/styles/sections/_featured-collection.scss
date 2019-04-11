@@ -2,6 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   max-width: $grid-max-width;
+  margin: 0 auto;
   padding-top: get-global-spacing('md', 'sm');
   padding-bottom: get-global-spacing('md', 'sm');
 }

@@ -130,3 +130,7 @@ $values in $breakpoints {
   /* stylelint-disable declaration-no-important */
   display: none !important;
 }
+
+#preview-bar-iframe {
+  position: relative !important;
+}
