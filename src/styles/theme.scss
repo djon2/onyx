@@ -46,4 +46,7 @@
 @import './templates/gift_card';
 @import './templates/product';
 
-// @include kindling-everything;
+// Layout
+@import './layout/grid';
+
+@include kindling-everything;

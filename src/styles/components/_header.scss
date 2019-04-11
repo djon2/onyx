@@ -26,16 +26,12 @@
     width: 100%;
 }
 
-.header-logo-wrapper {
-    line-height: rem-calc(80);
-}
-
 .header-logo {
-    width: rem-calc(150);
+    width: rem-calc(100);
 
     @include breakpoint('large') {
         width: 100%;
-        max-width: rem-calc(222);
+        max-width: rem-calc(100);
     }
 }
 
@@ -284,6 +280,7 @@
             position: relative;
             padding: calc(#{rem-calc(25)} + 2px) rem-calc(15 25);
             line-height: rem-calc(25);
+            text-decoration: none;
             color: get-color('white');
             font-size: rem-calc(15);
 

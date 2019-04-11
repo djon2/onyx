@@ -2,6 +2,8 @@
   display: flex;
   flex-wrap: wrap;
   max-width: $grid-max-width;
+  padding-top: get-global-spacing('md', 'sm');
+  padding-bottom: get-global-spacing('md', 'sm');
 }
 
 .featured-collection-item {

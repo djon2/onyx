@@ -136,7 +136,180 @@ $breakpoints: (
 //**
 //* Typography
 //************************************
-$anchor-text-decoration: none;
+
+$font-stacks: (
+    'Raleway': (Raleway, sans-serif),
+    'sans-serif': (Raleway, sans-serif),
+    'serif': (Raleway, serif),
+    'monospace': (monospace)
+);
+
+$font-weights: (
+    'normal': normal,
+    'bold': bold,
+);
+
+// $body-font-color: get-color('grey-400');
+$body-font-stack: 'Raleway';
+$body-font-weight: normal;
+
+$font-sizes: (
+    'normal': (
+        'small': 1rem
+    ),
+    'h1': (
+        'small': rem-calc(35),
+        'xlarge': rem-calc(38),
+    ),
+    'h2': (
+        'small': rem-calc(30),
+        'xlarge': rem-calc(32),
+    ),
+    'h3': (
+        'small': rem-calc(25),
+    ),
+    'h4': (
+        'small': rem-calc(22),
+    ),
+    'h5': (
+        'small': rem-calc(13),
+        'xlarge': rem-calc(14),
+    ),
+    'h6': (
+        'small': rem-calc(13),
+    ),
+    'p': (
+        'small': rem-calc(16),
+    ),
+    'li': (
+        'small': rem-calc(16),
+    ),
+    'cite': (
+        'small': rem-calc(13),
+    ),
+    'small-element': (
+        'small': rem-calc(11),
+    ),
+    'form-help': (
+        'small': rem-calc(14),
+    ),
+    'form-error': (
+        'small': rem-calc(12),
+    ),
+    'input': (
+        'small': rem-calc(18),
+    ),
+    'sneaky-label': (
+        'small': rem-calc(10),
+    ),
+    'tooltip': (
+        'small': 80%
+    ),
+    'anchor': (
+        'small': rem-calc(16)
+    )
+);
+
+$typography-margins: (
+    'p': $global-margin,
+    'h1': (
+        'small': rem-calc(15),
+    ),
+    'h2': (
+        'small': rem-calc(15),
+    ),
+    'h3': (
+        'small': rem-calc(15),
+    ),
+    'h4': (
+        'small': rem-calc(15),
+    ),
+    'h5': (
+        'small': rem-calc(15),
+    ),
+    'h6': (
+        'small': rem-calc(15),
+    ),
+    'ul': $global-margin,
+    'ul-li': get-ratio($global-margin, 0.5),
+    'ol': $global-margin,
+    'ol-li': get-ratio($global-margin, 0.5),
+    'dl': $global-margin,
+    'dt': (
+        'small': 0.3rem,
+    ),
+    'dd': (
+        'small': 0.3rem,
+    ),
+    'blockquote': $global-margin,
+);
+
+$line-heights: (
+    'normal': (
+        'small': 1.625
+    ),
+    'h1': (
+        'small': 1.5,
+        'medium': 1.5
+    ),
+    'h2': (
+        'small': 1,
+        'medium': 1.5
+    ),
+    'h3': (
+        'small': 1,
+        'medium': 1.5
+    ),
+    'h4': (
+        'small': 1,
+        'medium': 1.5
+    ),
+    'h5': (
+        'small': 1,
+        'medium': 1.5
+    ),
+    'h6': (
+        'small': 1,
+        'medium': 1.5
+    ),
+    'input': (
+        'small': 1.5
+    ),
+    'textarea': (
+        'small': 1.5,
+    ),
+    'anchor': 1.625
+);
+
+$heading-font-stack: 'Raleway';
+$heading-font-weight: 'bold';
+$heading-color: get-color('black');
+
+// $anchor-color: get-color('primary-dark');
+$anchor-color-hover-scale: null;
+// $anchor-color-hover: get-color('accent');
+$anchor-text-decoration: underline;
+$anchor-text-transform: none;
+$anchor-font-weight: bold;
+$anchor-font-size: 'anchor';
+$anchor-line-height: 'anchor';
+
+//$blockquote-color: get-color('grey-500');
+$blockquote-border-width: 0;
+$blockquote-padding: 0;
+
+// $cite-color: get-color('grey-400');
+$cite-pseudo-content: '\2014 \0020';
+
+$hr-max-width: 100%;
+$hr-border-width: 1px;
+$hr-border-style: solid;
+// $hr-border-color: 'grey-200';
+$hr-margin: (
+    'small': rem-calc(50),
+    'medium': rem-calc(60),
+    'xxlarge': rem-calc(65),
+);
 
 //**
 //*  Forms

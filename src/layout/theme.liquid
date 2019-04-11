@@ -51,6 +51,7 @@
     {% endif %}
   </script>
 
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   {% include 'script-tags', layout: 'theme' %}
 
   {{ content_for_header }}
@@ -62,7 +63,7 @@
 
   {% section 'header' %}
 
-  <main role="main" id="MainContent">
+  <main role="main" id="MainContent" class="main-content">
     {{ content_for_layout }}
   </main>
 

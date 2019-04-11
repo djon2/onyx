@@ -9,6 +9,12 @@
   - Heading: title of the featured collection section
 {%- endcomment -%}
 <section class="featured-collection">
+<div class="container">
+<div class="row">
+<div class="column-small-12">
+<div class="row">
+
+
   {% if section.settings.title != blank %}
     <h2 class="featured-collection__title">{{ section.settings.title | escape }}</h2>
   {% endif %}
@@ -58,6 +64,10 @@
       </a>
     {% endfor %}
   {% endfor %}
+  </div>
+</div>
+</div>
+</div>
 </section>
 
 {% schema %}

@@ -1,0 +1,62 @@
+
+
+@mixin starter-typography-heading {
+  h1,
+  .h1 {
+      @include heading-styles-h1;
+  }
+
+  h2,
+  .h2 {
+      @include heading-styles-h2;
+  }
+
+  h3,
+  .h3 {
+      @include heading-styles-h3;
+  }
+
+  h4,
+  .h4 {
+      @include heading-styles-h4;
+  }
+
+  h5,
+  .h5 {
+      @include heading-styles-h5;
+  }
+
+  h6,
+  .h6 {
+      @include heading-styles-h6;
+  }
+
+  @for $i from 1 through 6 {
+      h#{$i},
+      .h#{$i} {
+          margin-top: 0;
+
+          &:last-child {
+              margin-bottom: 0;
+          }
+      }
+  }
+}
+
+@mixin kindling-typography-styles {
+  @include kindling-typography-paragraph;
+  @include starter-typography-heading;
+  @include kindling-typography-horizontal-rule;
+  @include kindling-typography-blockquote;
+  @include kindling-typography-list;
+  @include kindling-typography-cite;
+  @include kindling-typography-abbreviation;
+  @include kindling-typography-code;
+  @include kindling-typography-keystroke;
+  @include kindling-typography-anchor;
+  @include kindling-typography-modifier;
+}
+
+.cms-page-content {
+  @include kindling-typography-margin;
+}

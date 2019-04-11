@@ -1,50 +1,54 @@
-// @each $name, $color in $color-contexts {
-//   .#{$name}-color {
-//       color: get-color($color) !important;
-//   }
+@each $name,
+$color in $color-contexts {
+  .#{$name}-color {
+    color: get-color($color) !important;
+  }
 
-//   .#{$name}-bg {
-//       background-color: get-color($color) !important;
-//   }
-// }
+  .#{$name}-bg {
+    background-color: get-color($color) !important;
+  }
+}
 
-// @each $size-label, $size-values in $universal-spacing {
-//   .padding-v-#{$size-label} {
-//       padding-top: get-global-spacing($size-label, 'sm');
-//       padding-bottom: get-global-spacing($size-label, 'sm');
+@each $size-label,
+$size-values in $universal-spacing {
+  .padding-v-#{$size-label} {
+    padding-top: get-global-spacing($size-label, 'sm');
+    padding-bottom: get-global-spacing($size-label, 'sm');
 
-//       @include breakpoint('large') {
-//           padding-top: get-global-spacing($size-label, 'md');
-//           padding-bottom: get-global-spacing($size-label, 'md');
-//       }
-//   }
+    @include breakpoint('large') {
+      padding-top: get-global-spacing($size-label, 'md');
+      padding-bottom: get-global-spacing($size-label, 'md');
+    }
+  }
 
-//   .margin-b-#{$size-label} {
-//       margin-bottom: rem-calc(20) !important;
+  .margin-b-#{$size-label} {
+    margin-bottom: rem-calc(20) !important;
 
-//       @include breakpoint('large') {
-//           margin-bottom: get-global-spacing($size-label, 'md') !important;
-//       }
-//   }
-// }
+    @include breakpoint('large') {
+      margin-bottom: get-global-spacing($size-label, 'md') !important;
+    }
+  }
+}
 
-// @each $breakpoint, $values in $breakpoints {
-//   .show-for-#{$breakpoint} {
-//       display: none;
+@each $breakpoint,
+$values in $breakpoints {
+  .show-for-#{$breakpoint} {
+    display: none;
 
-//       @include breakpoint($breakpoint) {
-//           display: block;
-//       }
-//   }
-// }
+    @include breakpoint($breakpoint) {
+      display: block;
+    }
+  }
+}
 
-// @each $breakpoint, $values in $breakpoints {
-//   .hide-for-#{$breakpoint} {
-//       @include breakpoint($breakpoint) {
-//           display: none;
-//       }
-//   }
-// }
+@each $breakpoint,
+$values in $breakpoints {
+  .hide-for-#{$breakpoint} {
+    @include breakpoint($breakpoint) {
+      display: none;
+    }
+  }
+}
 
 .no-margin-bottom {
   margin-bottom: 0 !important;

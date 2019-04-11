@@ -1,0 +1,48 @@
+@include grid-column-classes;
+@include grid-column-offset-classes;
+
+.container {
+    @include max-width-container;
+
+    @each $breakpoint, $grid-gutter in $grid-column-gutters {
+        @include breakpoint($breakpoint) {
+            padding-right: get-side($grid-gutter, 'right');
+            padding-left: get-side($grid-gutter, 'left');
+        }
+    }
+}
+
+.row {
+    @include grid-row;
+}
+
+.align-center {
+    justify-content: center;
+}
+
+.align-center-middle,
+.align-middle-center {
+    align-items: center;
+    justify-content: center;
+}
+
+.column,
+.columns {
+    flex: 1;
+}
+
+.grid-left {
+    $responsive-sizes: (
+        'small': 100%,
+        'large': 70%,
+    );
+    @include grid-column($responsive-sizes);
+}
+
+.grid-right {
+    $responsive-sizes: (
+        'small': 100%,
+        'large': 30%,
+    );
+    @include grid-column($responsive-sizes);
+}
