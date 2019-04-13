@@ -57,6 +57,10 @@
   @include kindling-typography-modifier;
 }
 
-.cms-page-content {
+.rte {
   @include kindling-typography-margin;
+}
+
+table {
+    @include table();
 }
