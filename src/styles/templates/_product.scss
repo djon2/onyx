@@ -1,3 +1,10 @@
+.product-single__thumbnails {
+  display: flex;
+  justify-content: center;
+  margin-left: 0;
+  list-style-type: none;
+}
+
 .product-single__thumbnail-image {
   border: 2px solid transparent;
 
