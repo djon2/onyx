@@ -36,7 +36,33 @@ Theme Store optional settings
       </h2>
 
       <div class="off-canvas-content-wrapper">
-        {% comment %} MENU {% endcomment %}
+        <ul class="mobile-menu">
+          {% for link in linklists[section.settings.menu].links %}
+          {% if link.links != blank %}
+          <li class="menu-item menu-item-has-children">
+            <a href="{{ link.url }}">
+              {{ link.title }}
+              <button class="child-nav-toggle-btn">{% include 'icon-arrow-down' %}</button>
+            </a>
+            <ul class="mobile-sub-menu">
+              {% for childlink in link.links %}
+              <li class="menu-item">
+                <a href="{{ childlink.url }}">
+                  {{ childlink.title }}
+                </a>
+              </li>
+              {% endfor %}
+            </ul>
+          </li>
+          {% else %}
+          <li class="menu-item">
+            <a href="{{ link.url }}">
+              {{ link.title }}
+            </a>
+          </li>
+          {% endif %}
+          {% endfor %}
+        </ul>
       </div>
     </div>
 

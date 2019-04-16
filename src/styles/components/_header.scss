@@ -94,12 +94,13 @@
         background: get-color('secondary');
 
         a {
-           // @include transition(background);
+            @include transition(background);
             display: block;
             border-bottom: 1px solid get-color('white');
             padding: rem-calc(10 20);
             text-transform: uppercase;
             color: get-color('white');
+            text-decoration: none;
 
             &:hover,
             &:focus {
@@ -189,14 +190,15 @@
 }
 
 .mobile-menu-close-button {
-  //  @include font-icon('close');
-   // @include transition(color);
+    @include font-icon('close');
+    @include transition(color);
     position: absolute;
     top: 50%;
     right: rem-calc(18);
     transform: translateY(-50%);
     background: transparent;
     color: get-color('white');
+    text-decoration: none;
 
     &:hover,
     &:focus {
@@ -205,10 +207,11 @@
 }
 
 .mobile-menu-toggle {
-   // @include font-icon('menu');
+    @include font-icon('menu');
     display: inline-block;
     color: get-color('white');
     font-size: rem-calc(25);
+    text-decoration: none;
 
     @include breakpoint('large') {
         display: none;
@@ -218,7 +221,6 @@
     &:focus {
         color: get-color('grey-100');
     }
-
 }
 
 .mobile-menu-wrapper {

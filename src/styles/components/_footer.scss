@@ -20,6 +20,10 @@ $copyright-link-color: get-color('white');
     display: flex;
     flex-wrap: wrap;
 
+    @include breakpoint('large') {
+        justify-content: flex-end;
+    }
+
     li {
         margin-right: rem-calc(20);
         list-style-type: none;
