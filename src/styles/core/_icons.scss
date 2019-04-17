@@ -1,5 +1,4 @@
 $icon-font: 'icon-font';
-$icon-font-path: '/src/assets/fonts/icons'; 
 $font-icon-glyph-map: (
     'hours': '\e900',
     'account': '\e901',
@@ -71,17 +70,6 @@ $font-icon-glyph-map: (
     'wishlist-private': '\e945',
     'wishlist-public': '\e946',
 );
-
-@font-face {
-    font-family: $icon-font;
-    font-weight: normal;
-    font-style: normal;
-    src: url('#{$icon-font-path}/Northern-UI---Default-Font.eot');
-    src: url('#{$icon-font-path}/Northern-UI---Default-Font.eot?#iefix') format('embedded-opentype'),
-    url('#{$icon-font-path}/Northern-UI---Default-Font.woff') format('woff'),
-    url('#{$icon-font-path}/Northern-UI---Default-Font.ttf') format('truetype'),
-    url('#{$icon-font-path}/Northern-UI---Default-Font.svg#Northern-UI---Default-Font') format('svg');
-}
 
 @mixin font-icon(
     $icon-name,

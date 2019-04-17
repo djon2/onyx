@@ -83,13 +83,13 @@ Theme Store optional settings
           </div>
 
           <div class="column-small-4 column-large-8 header-links">
-            <nav class="header-nav" role="navigation">
+           
               <a href="#" class="js-mobile-menu-toggle mobile-menu-toggle">
-                <span class="screenreader-only">Toggle mobile menu</span>
+                <span class="screenreader-only">  URL: {{"fonts/Northern-UI---Default-Font.woff" | asset_url }}</span>
               </a>
 
-
               <nav class="header-nav" role="navigation">
+                
                 <ul class="main-menu-desktop">
                   {% for link in linklists[section.settings.menu].links %}
                   {% if link.links != blank %}
@@ -111,14 +111,13 @@ Theme Store optional settings
                   {% else %}
                   <li class="menu-item">
                     <a href="{{ link.url }}">
-                      {{ link.title }}
+                      {{ link.title }}                      
                     </a>
                   </li>
                   {% endif %}
                   {% endfor %}
                 </ul>
               </nav>
-            </nav>
           </div>
         </div>
       </div>
