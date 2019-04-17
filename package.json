@@ -20,7 +20,8 @@
     "eslint-plugin-shopify": "^19.0.0",
     "northern-kindling": "git+ssh://git@git.northern.co/internal/northern-kindling.git#semver:~1.21.3",
     "stylelint-config-prettier": "^3.0.4",
-    "stylelint-config-shopify": "^5.0.0"
+    "stylelint-config-shopify": "^5.0.0",
+    "requirejs": "2.3.5"
   },
   "dependencies": {
     "@shopify/theme-a11y": "^2.0.1",

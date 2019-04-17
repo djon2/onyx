@@ -11,6 +11,7 @@ import '../../styles/theme.scss';
 import {focusHash, bindInPageLinks} from '@shopify/theme-a11y';
 import {cookiesEnabled} from '@shopify/theme-cart';
 
+
 // Common a11y fixes
 focusHash();
 bindInPageLinks();
