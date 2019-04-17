@@ -20,7 +20,7 @@
 
 // Core
 @import './core/icons';
-@import './core/forms';
+// @import './core/forms';
 @import './core/helpers';
 @import './core/layout';
 @import './core/media';
@@ -30,7 +30,6 @@
 @import './core/typography';
 
 // Components
-@import './components/header';
 @import './components/buttons';
 @import './components/hero-banner';
 @import './components/placeholders';
@@ -38,6 +37,7 @@
 @import './components/form/callout';
 @import './components/form/widget';
 @import './components/form/form';
+@import './components/header';
 @import './components/footer';
 
 // Sections

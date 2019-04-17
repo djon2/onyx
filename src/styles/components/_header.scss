@@ -24,6 +24,13 @@
     border-bottom: 1px solid darken(get-color('white'), 50%);
     background-color: get-color('black');
     width: 100%;
+    padding-top: rem-calc(5);
+    padding-bottom: rem-calc(5);
+
+    @include breakpoint('large') {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
 }
 
 .header-logo {
@@ -183,7 +190,7 @@
 .mobile-menu-title {
     position: relative;
     margin-bottom: 0;
-    padding: rem-calc(15 20);
+    padding: rem-calc(14 20);
     text-transform: uppercase;
     color: get-color('white');
     font-size: rem-calc(20);

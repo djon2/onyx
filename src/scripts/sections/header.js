@@ -1,11 +1,11 @@
 const selectors = {
   mobileMenuToggle: '.js-mobile-menu-toggle',
-  header: '[data-section-type=\'header\']',
+  body: 'body',
 };
 
 document.querySelectorAll(selectors.mobileMenuToggle).forEach((button) => {
   button.onclick = (event) => {
     event.preventDefault();
-    document.querySelector(selectors.header).classList.toggle('menu-is-open');
+    document.querySelector(selectors.body).classList.toggle('menu-is-open');
   };
 });
